@@ -36,7 +36,7 @@ Unlike other options, the “Time-Turner” device is self-contained, battery-po
 1. Add the Adafruit M0 libraries to the Arduino IDE: https://learn.adafruit.com/adafruit-feather-m0-basic-proto/using-with-arduino-ide
 1. Add the iSkipper library to the Arduino IDE by copying them into your libraries folder (C:\Users\%username%\Documents\Arduino\libraries): https://github.com/wizard97/iSkipper/tree/master/emulator/iSkipper
 1. Add the iSkipper library dependencies to the Arduino IDE by copying them into your libraries folder: https://github.com/wizard97/iSkipper/tree/master/emulator/libs
-1. Download this repository and open TimeTurner_Arduino_Sketch.ino in the Arduino IDE
+1. Download this repository and open TimeTurner_Arduino_Sketch_modified.ino in the Arduino IDE
 1. Go to Tools > Board > Adafruit SAMD Boards and select “Adafruit Feather M0”
 1. You may want to change “MY_CLICKER_ID” to something else. This can be changed later but is a little easier to do in the code if you just want to hardcode one remote
 1. Plug your device into your computer using a USB 2.0 A-Male to Micro B Cable
