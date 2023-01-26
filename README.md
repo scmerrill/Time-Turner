@@ -6,14 +6,14 @@ Simple Device for Defeating RF Attendance Systems (To Be in Two Places at Once)
 ## Disclaimers
 The “Time-Turner” project is provided for entertainment and experimental research purposes only. Research applicable hacking laws and your institution’s own policies before using a “Time-Turner” device. Do not use a “Time-Turner” device with any “base station” you don’t own or have permission to use with a “Time-Turner” device. The contributors of this project are not responsible for improper or nefarious use. Further disclaimers are provided in the [MIT License](https://github.com/scmerrill/Time-Turner/blob/main/LICENSE).
 
-This code is rough to put it lightly. It definitely can be improved but it is fully functional
+This code is a little rough to put it lightly. It definitely can be improved but it is fully functional. I will probably try to redo it from scratch in the future to optomize it.
 
 ## Introduction
 RFID-based attendance and polling devices have become an increasingly popular way to monitor student attendance and participation. “Time-Turner” is an Arduino-based device that can emulate a popular RFID attendance device (thus allowing you to appear to be in two places at once). It is capable of intercepting other poll responses and choosing the most popular answer. This repository contains the “Time-Turner” firmware and instructions for configuring the necessary hardware to build your own “Time-Turner” device.
 
-Unlike other options, the “Time-Turner” device is self-contained, battery-powered, and does not require a physical connection to any other device. It can be built for about $39 using easily-accessible off-the-shelf components - less than the cost of a legitimate RFID attendance system. The assembled device weighs about 20g and lasts for over 20 hours on a single charge. The compiled firmware requires about 50kb of flash storage space. It should take an hour or less to fully assemble and configure.
+Unlike other options, the “Time-Turner” device is self-contained, battery-powered, and does not require a physical connection to any other device. It can be built for about $50 using easily-accessible off-the-shelf components - less than the cost of a legitimate RFID attendance system. The assembled device weighs about 20g and lasts for over 20 hours on a single charge. The compiled firmware requires about 60kb of flash storage space. It should take an hour or less to fully assemble and configure.
 
-“Time-Turner” is developed by Vivek Nair and is based on the previous work of Aaron Wisner, Jacob Glueck, and Charles Cao in reverse-engineering the proprietary protocol used by the targeted RFID attendance device.
+“Time-Turner” was developed by Vivek Nair and added onto by Spencer Merrill and is based on the previous work of Aaron Wisner, Jacob Glueck, and Charles Cao in reverse-engineering the proprietary protocol used by the targeted RFID attendance device.
 
 ## Suggested Hardware
 * Adafruit Feather M0 RFM69HCW Packet Radio - 868 or 915 MHz - RadioFruit: https://www.adafruit.com/product/3176
