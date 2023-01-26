@@ -4,7 +4,9 @@ Simple Device for Defeating RF Attendance Systems (To Be in Two Places at Once)
 ![Time-Turner Device](time-turner.jpg)
 
 ## Disclaimers
-The “Time-Turner” project is provided for entertainment and experimental research purposes only. Research applicable hacking laws and your institution’s own policies before using a “Time-Turner” device. Do not use a “Time-Turner” device with any “base station” you don’t own or have permission to use with a “Time-Turner” device. The contributors of this project are not responsible for improper or nefarious use. Further disclaimers are provided in the [MIT License](https://github.com/VCNinc/Time-Turner/blob/main/LICENSE).
+The “Time-Turner” project is provided for entertainment and experimental research purposes only. Research applicable hacking laws and your institution’s own policies before using a “Time-Turner” device. Do not use a “Time-Turner” device with any “base station” you don’t own or have permission to use with a “Time-Turner” device. The contributors of this project are not responsible for improper or nefarious use. Further disclaimers are provided in the [MIT License](https://github.com/scmerrill/Time-Turner/blob/main/LICENSE).
+
+This code is rough to put it lightly. It definitely can be improved but it is fully functional
 
 ## Introduction
 RFID-based attendance and polling devices have become an increasingly popular way to monitor student attendance and participation. “Time-Turner” is an Arduino-based device that can emulate a popular RFID attendance device (thus allowing you to appear to be in two places at once). It is capable of intercepting other poll responses and choosing the most popular answer. This repository contains the “Time-Turner” firmware and instructions for configuring the necessary hardware to build your own “Time-Turner” device.
@@ -36,7 +38,7 @@ Unlike other options, the “Time-Turner” device is self-contained, battery-po
 1. Add the iSkipper library dependencies to the Arduino IDE by copying them into your libraries folder: https://github.com/wizard97/iSkipper/tree/master/emulator/libs
 1. Download this repository and open TimeTurner_Arduino_Sketch.ino in the Arduino IDE
 1. Go to Tools > Board > Adafruit SAMD Boards and select “Adafruit Feather M0”
-1. You may want to change “MY_CLICKER_ID” to something else. All other configuration options are already set optimally for the Feather M0 platform.
+1. You may want to change “MY_CLICKER_ID” to something else. This can be changed later but is a little easier to do in the code if you just want to hardcode one remote
 1. Plug your device into your computer using a USB 2.0 A-Male to Micro B Cable
 1. Go to Tools > Port and select the USB port where you plugged in the device
 1. Go to Sketch > Upload - this sometimes takes multiple attempts to work.
@@ -48,6 +50,8 @@ Unlike other options, the “Time-Turner” device is self-contained, battery-po
 
 Estimated percent battery life remaining is indicated on the bottom right. Battery use is higher when any mode is toggled “on”. The device remains operational while charging.
 
+The current channel is displayed above the battery
+
 ## Modes of Operation
 * View Votes: Displays the number of votes for each option overheard by device.
 * Fake Votes: Floods the system with fake votes from random device IDs (Layer 7).
@@ -55,18 +59,21 @@ Estimated percent battery life remaining is indicated on the bottom right. Batte
 * DoS Attack: Floods the system with random packets causing real votes to fail (Layer 4).
 * Copy Votes: Automatically votes for the most popular option based on overheard votes.
 * Vote Choice: Automatically votes for the selected option regardless of overheard votes.
+* Set RemoteID: Change your remote ID without having to mess with the Arduino code
+* Set Channel: Change the channel
 
-## Other Known Attacks
-If an instructor is using an attendance device to controll their machine, additional exploits may be possible.
+## Other Known Attacks AKA my TODO
+If an instructor is using an attendance device to control their machine, additional exploits may be possible.
 * Switching the instructor's slides
 * Starting and stopping polling
 * Changing the answer marked as "correct"
 
 ## Source Repositories
-* Time-Turner: https://github.com/VCNinc/Time-Turner
+* This modified Time-Turner: https://github.com/scmerrill/Time-Turner
+* Original Time-Turner: https://github.com/VCNinc/Time-Turner
 * iSkipper Software: https://github.com/charlescao460/iSkipper-Software
 * iSkipper: https://github.com/wizard97/iSkipper
 
-*Contributors: [Aaron Wisner](https://github.com/wizard97), [Jacob Glueck](https://github.com/orangeturtle739), [Charles Cao](https://github.com/charlescao460), [Ammar Askar](https://github.com/ammaraskar), [Bruce Land](https://people.ece.cornell.edu/land/), [Vivek Nair](https://github.com/VCNinc)*
+*Contributors: [Aaron Wisner](https://github.com/wizard97), [Jacob Glueck](https://github.com/orangeturtle739), [Charles Cao](https://github.com/charlescao460), [Ammar Askar](https://github.com/ammaraskar), [Bruce Land](https://people.ece.cornell.edu/land/), [Vivek Nair](https://github.com/VCNinc), [Spencer Merrill](https://github.com/scmerrill)*
 
-*License: [MIT](https://github.com/VCNinc/Time-Turner/blob/main/LICENSE)*
+*License: [MIT](https://github.com/scmerrill/Time-Turner/blob/main/LICENSE)*
